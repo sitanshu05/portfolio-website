@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::after,*::before{
+  box-sizing: border-box;
+}
+html{
+  background-color: #111111;
+  scroll-behavior: smooth;
+}
+img{
+  max-width: 100%;
+}
+body{
+  padding: 0;
+  margin: 0;
+  color: white;
+}
