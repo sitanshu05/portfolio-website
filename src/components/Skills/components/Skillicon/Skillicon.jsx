@@ -37,7 +37,7 @@ function Skillicon(props) {
         >
             <Icon icon={props.icon}
                 color="#545454"
-                width={screenSize.width <= 450 ? "50" : screenSize.width <= 1000 ? "80" : "90"}
+                width={screenSize.width <= 450 ? "50" : screenSize.width <= 1200 ? "75" : "90"}
             />
         </motion.span>
     
