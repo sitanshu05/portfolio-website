@@ -1,6 +1,7 @@
 import {React, useState,useEffect} from 'react'
 import './Skillicon.css'
 import { Icon } from '@iconify/react';
+import { motion } from 'framer-motion';
     
 function Skillicon(props) {
 
@@ -29,7 +30,16 @@ function Skillicon(props) {
 
     return (
     
-        <Icon icon={props.icon} color="#545454" width={screenSize.width <= 450 ? "50" : screenSize.width <= 1000 ? "80" : "90"}/>
+        <motion.span
+        initial ={{opacity : 0, x : -5,y : -5}}
+        whileInView={{opacity : 1, x : 0,y : 0}}
+        transition={{duration:0.5 , delay : props.i * 0.2}}
+        >
+            <Icon icon={props.icon}
+                color="#545454"
+                width={screenSize.width <= 450 ? "50" : screenSize.width <= 1000 ? "80" : "90"}
+            />
+        </motion.span>
     
     )
 }

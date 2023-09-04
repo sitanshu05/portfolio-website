@@ -24,13 +24,13 @@ function Skills(props) {
     const frstSkillSet = ['uil:react' ,'file-icons:c', 'mdi:sql-query','ri:javascript-fill']
     const sndSkillSet = ['akar-icons:html-fill', 'akar-icons:css-fill', 'akar-icons:python-fill','mdi:tailwind']
 
-    const frstSkills = frstSkillSet.map((skill , i) => {
-        return <Skillicon icon = {skill} />
+    const frstSkills = frstSkillSet.map((skill, index) => {
+        return <Skillicon icon = {skill} i = {index}/>
    
     });
 
-    const sndSkills = sndSkillSet.map((skill) => {
-        return <Skillicon icon = {skill} />
+    const sndSkills = sndSkillSet.map((skill, index) => {
+        return <Skillicon icon = {skill} i = {index + 4}/>
     
     });
 
@@ -56,6 +56,8 @@ function Skills(props) {
             window.removeEventListener('resize', updateDimension);
         })
   }, [screenSize])
+
+
 
   let content
 

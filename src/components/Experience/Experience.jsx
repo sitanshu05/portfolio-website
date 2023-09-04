@@ -7,16 +7,16 @@ import { motion } from 'framer-motion'
 
 
 const style = {
-    container : "mx-[4rem] mb-[10rem] w-full max-w-[1800px] px-[1rem] 800:px-[3rem] 1000:px-[4rem] flex flex-col justify-center items-center",
+    container : "mx-[4rem] mb-[2rem] w-full max-w-[1800px] px-[1rem] 800:px-[3rem] 1000:px-[4rem] flex flex-col justify-center items-center",
     titleMain : "text-[1.5rem] font-code text-purple mb-[3rem] 800:text-[2rem] self-start",
     highlight : "text-orange",
-    exp_div : " flex flex-col items-center justify-center max-w-[1500px]",
-    exp : "flex flex-col items-center text-center mb-[2rem] 800:flex-row 800:mx-[1rem] w-full 800:justify-between 800:mb-[5rem] 800:mt-[3rem]",
+    exp_div : " flex flex-col items-center justify-between gap-[4rem] max-w-[1500px]",
+    exp : "flex flex-row items-center justify-between text-center mb-[2rem] 800:flex-row 800:mx-[1rem] w-full 800:justify-between 800:mb-[5rem] 800:mt-[3rem]",
     exp_content : "",
-    img : "max-w-[100%] w-[75%] mb-[1.5rem] 800:w-[40%] ",
-    title : "text-[1.75rem] min-[400px]:text-[2rem] 1000:text-[2.5rem]",
-    position : "text-[1.5rem] opacity-80 min-[400px]:text-[1.75rem] 1000:text-[2rem]",
-    time : "opacity-75 min-[400px]:text-[1.25rem] 1000:text-[1.5rem]"
+    img : "max-w-[100%] w-[40%] mb-[1.5rem] 800:w-[40%] ",
+    title : "text-[1.125rem] min-[400px]:text-[2rem] 1000:text-[2.5rem]",
+    position : "text-[1.1rem] opacity-80 min-[400px]:text-[1.75rem] 1000:text-[2rem]",
+    time : "opacity-75 text-[0.85rem] min-[400px]:text-[1.25rem] 1000:text-[1.5rem]"
 
 }
     
@@ -32,8 +32,8 @@ function Experience(props) {
 
             <div className={style.exp_div}>
                 <motion.div className={style.exp}
-                initial={{opacity : 0, y : 80}}
-                whileInView={{opacity : 1, y : 0}}
+                initial={{opacity : 0, x : -20}}
+                whileInView={{opacity : 1, x : 0}}
                 transition={{duration:1.5}}
                 viewport={{once:true}}
                 >
@@ -53,8 +53,8 @@ function Experience(props) {
                 </motion.div>
 
                 <motion.div className={style.exp}
-                initial={{opacity : 0, y : 80}}
-                whileInView={{opacity : 1, y : 0}}
+                initial={{opacity : 0, x : 15}}
+                whileInView={{opacity : 1, x : 0}}
                 transition={{duration:1.5}}
                 viewport={{once:true}}
                 >
@@ -72,8 +72,8 @@ function Experience(props) {
                     </div>
                 </motion.div>
                 <motion.div className={style.exp}
-                initial={{opacity : 0, y : 80}}
-                whileInView={{opacity : 1, y : 0}}
+                initial={{opacity : 0, x : -20}}
+                whileInView={{opacity : 1, x : 0}}
                 transition={{duration:1.5}}
                 viewport={{once:true}}
                 >
