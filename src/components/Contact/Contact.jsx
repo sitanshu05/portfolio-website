@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const style = {
     container : "mx-[0.75rem] mb-[20rem] max-w-[1800px] w-full px-[1rem] 800:px-[3rem] 1000:px-[4rem]  1800:pb-[14rem]",
-    title : "text-[1.5rem] font-code text-purple mb-[10rem] 800:text-[2rem] 1800:pb-[10rem]",
+    title : "text-[1.5rem] font-code text-purple mb-[12rem] 800:text-[2rem] 1800:pb-[10rem]",
     highlight : " text-orange ",
     contact_div : "text-center",
     text : "text-[2rem] mb-[2rem] 800:text-[2.5rem] 1000:text-[3rem] 1000:pt-[6rem]",
