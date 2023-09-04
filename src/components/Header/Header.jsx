@@ -45,7 +45,7 @@ function Header(props) {
     const hoverAnimation = {
         y: -5,
         transition: { duration: 0.4 }, // Fast transition on hover,
-        boxShadow : "0px 13px 7px -10px #F96900",
+        // boxShadow : "0px 13px 7px -10px #F96900",
        
 
     };

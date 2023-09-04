@@ -87,7 +87,7 @@ function Hero(props) {
                 </motion.div>
             </div>
             <motion.div className={style.hero_img_div}
-                initial={{opacity :0, translateX : 50}}
+                initial={{opacity :0, translateX : 15}}
                 animate={{opacity:1,translateX : 0}}
                 transition={{duration : 2 }}
             >

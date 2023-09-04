@@ -77,7 +77,7 @@ function About(props) {
                     </p>
                 </motion.div>
                 <motion.div className={style.image_div}
-                initial={{opacity : 0, translateX : 50}}
+                initial={{opacity : 0, translateX : 10}}
                 whileInView={{opacity:1 , translateX:0}}
                 transition={{duration : 2}}
                 viewport={{ once: true }}

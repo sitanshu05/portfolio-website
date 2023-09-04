@@ -40,7 +40,7 @@ function Projects(props) {
                     image={detweb}
                     title = "Website for DET TMC"
                     description = "Led a team of four in developing DET TMC's website, enhancing its online presence and functionality."
-                    link = "www.dettoastmasters.org"
+                    link = "https://dettoastmasters.org"
                 />
 
                 <Projcard
