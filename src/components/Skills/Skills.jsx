@@ -62,30 +62,20 @@ function Skills(props) {
   let content
 
   if(screenSize.width <=1000){
-     content = (<motion.div className={style.skill_container}
-        initial ={{opacity : 0, y : 100}}
-            whileInView={{opacity : 1,y:0}}
-            transition = {{duration :1}}
-            viewport={{ once: true }}
-     >
+     content = (<div className={style.skill_container}>
         <div className={style.row1}>
             {frstSkills}
         </div>
         <div className={style.row2}>
             {sndSkills}
         </div>
-    </motion.div>)
+    </div>)
   }
   else{
     content = (
-        <motion.div className={style.skill_container}
-            initial ={{opacity : 0, y : 100}}
-            whileInView={{opacity : 1,y:0}}
-            transition = {{duration :1}}
-            viewport={{ once: true }}
-        >
-                  {frstSkills} {sndSkills} 
-            </motion.div>
+        <div className={style.skill_container}>
+            {frstSkills} {sndSkills} 
+        </div>
     )
   }
 
