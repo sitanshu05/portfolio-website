@@ -34,6 +34,7 @@ function Skillicon(props) {
         initial ={{opacity : 0, x : -5,y : -5}}
         whileInView={{opacity : 1, x : 0,y : 0}}
         transition={{duration:0.5 , delay : props.i * 0.2}}
+        viewport={{ once: true }}
         >
             <Icon icon={props.icon}
                 color="#545454"
