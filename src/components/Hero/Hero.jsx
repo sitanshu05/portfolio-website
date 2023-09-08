@@ -4,6 +4,7 @@ import hero from '../../assets/computer-2.png'
 import { Icon } from '@iconify/react';
 import  resume  from '../../assets/Sitanshu_Hallad.pdf'
 import { motion } from 'framer-motion';
+import { useScreenSize } from '../../utils/screenSize';
 
 const style = {
     container: "px-[1rem] mb-[6rem] flex flex-col items-start 800:flex-row 800:justify-around 800:items-center 800:mt-[6rem] 800:mb-[10rem] w-full max-w-[2500px] 1000:mb-[15rem] 1800:mb-[30rem]",
@@ -18,28 +19,8 @@ const style = {
     
 function Hero(props) {
 
-    function getCurrentDimension(){
-        return {
-              width: window.innerWidth,
-              height: window.innerHeight
-        }
-    }
-
-    const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
-    useEffect(() => {
-        const updateDimension = () => {
-              setScreenSize(getCurrentDimension())
-        }
-        window.addEventListener('resize', updateDimension);
-
-    
-        return(() => {
-            window.removeEventListener('resize', updateDimension);
-        })
-  }, [screenSize])
-
-
+   
+    const screenSize = useScreenSize();
 
     return (
         <div className={style.container}>

@@ -2,31 +2,12 @@ import {React, useState,useEffect} from 'react'
 import './Skillicon.css'
 import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
-    
+import { useScreenSize } from '../../../../utils/screenSize';
+
+
 function Skillicon(props) {
-
-
-    function getCurrentDimension(){
-        return {
-              width: window.innerWidth,
-              height: window.innerHeight
-        }
-    }
-
-    const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
-    useEffect(() => {
-        const updateDimension = () => {
-              setScreenSize(getCurrentDimension())
-        }
-        window.addEventListener('resize', updateDimension);
-
     
-        return(() => {
-            window.removeEventListener('resize', updateDimension);
-        })
-  }, [screenSize])
-
+    const screenSize = useScreenSize();
 
     return (
     

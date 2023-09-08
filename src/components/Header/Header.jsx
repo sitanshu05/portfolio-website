@@ -3,6 +3,7 @@ import './Header.css'
 import logo from "../../assets/logo.png"
 import { Link } from 'react-scroll'
 import {motion} from 'framer-motion'
+import { useScreenSize } from '../../utils/screenSize'
 
 
 const style = {
@@ -21,26 +22,7 @@ const style = {
     
 function Header(props) {
 
-    function getCurrentDimension(){
-        return {
-              width: window.innerWidth,
-              height: window.innerHeight
-        }
-    }
-
-    const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
-    useEffect(() => {
-        const updateDimension = () => {
-              setScreenSize(getCurrentDimension())
-        }
-        window.addEventListener('resize', updateDimension);
-
-    
-        return(() => {
-            window.removeEventListener('resize', updateDimension);
-        })
-  }, [screenSize])
+    const screenSize = useScreenSize();
 
     const hoverAnimation = {
         y: -5,

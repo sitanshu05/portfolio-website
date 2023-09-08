@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import './Skills.css'
 import Skillicon from './components/Skillicon/Skillicon'
 import { motion } from 'framer-motion'
+import { useScreenSize } from '../../utils/screenSize'
 
 // border-b-[1px] border-acc_grey pb-[1rem]",
 
@@ -35,31 +36,8 @@ function Skills(props) {
     });
 
 
-
-    function getCurrentDimension(){
-        return {
-              width: window.innerWidth,
-              height: window.innerHeight
-        }
-    }
-
-    const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
-    useEffect(() => {
-        const updateDimension = () => {
-              setScreenSize(getCurrentDimension())
-        }
-        window.addEventListener('resize', updateDimension);
-
-    
-        return(() => {
-            window.removeEventListener('resize', updateDimension);
-        })
-  }, [screenSize])
-
-
-
   let content
+  const screenSize = useScreenSize();
 
   if(screenSize.width <=1000){
      content = (<div className={style.skill_container}>

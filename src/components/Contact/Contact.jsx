@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from 'react'
 import './Contact.css'
 import { motion } from 'framer-motion'
+import { useScreenSize } from '../../utils/screenSize'
 
 const style = {
     container : "mx-[0.75rem] mb-[20rem] max-w-[1800px] w-full px-[1rem] 800:px-[3rem] 1000:px-[4rem]  1800:pb-[14rem]",
@@ -14,26 +15,7 @@ const style = {
     
 function Contact(props) {
 
-    function getCurrentDimension(){
-        return {
-              width: window.innerWidth,
-              height: window.innerHeight
-        }
-    }
-
-    const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
-    useEffect(() => {
-        const updateDimension = () => {
-              setScreenSize(getCurrentDimension())
-        }
-        window.addEventListener('resize', updateDimension);
-
-    
-        return(() => {
-            window.removeEventListener('resize', updateDimension);
-        })
-  }, [screenSize])
+    const screenSize = useScreenSize();
 
 
 

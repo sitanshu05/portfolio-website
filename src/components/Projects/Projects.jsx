@@ -6,11 +6,13 @@ import paper from '../../assets/paper.png'
 import detweb from '../../assets/detwebsite.png'
 import elpdi from '../../assets/elpdi.png'
 import { motion} from 'framer-motion'
+
+
 const style = {
     container : "mx-[0.75rem] mb-[5rem] w-full max-w-[1800px] px-[1rem] 800:px-[3rem] 1000:px-[4rem]",
     title : "text-[1.5rem] font-code text-purple mb-[3rem] 800:text-[2rem]",
     highlight : " text-orange",
-    cards : "flex flex-col justify-center  800:flex-row 800:flex-wrap  "
+    cards : "flex flex-col justify-center items-center 800:flex-row 800:flex-wrap  "
 }
 
 

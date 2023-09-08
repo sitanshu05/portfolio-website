@@ -2,6 +2,7 @@ import {React,useState,useEffect} from 'react'
 import './About.css'
 import car from '../../assets/car.png'
 import {motion} from 'framer-motion'
+import { useScreenSize } from '../../utils/screenSize'
 
 const style = {
     container : "mx-[0.75rem] mb-[4rem] w-full max-w-[1800px] px-[1rem] 800:px-[3rem] 1000:px-[4rem]",
@@ -18,28 +19,9 @@ const style = {
     
 function About(props) {
 
-    function getCurrentDimension(){
-        return {
-              width: window.innerWidth,
-              height: window.innerHeight
-        }
-    }
+    const screenSize = useScreenSize();
 
-    const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
-    useEffect(() => {
-        const updateDimension = () => {
-              setScreenSize(getCurrentDimension())
-        }
-        window.addEventListener('resize', updateDimension);
-
-    
-        return(() => {
-            window.removeEventListener('resize', updateDimension);
-        })
-  }, [screenSize])
-
-  let content1,content2;
+    let content1,content2;
 
 
 
